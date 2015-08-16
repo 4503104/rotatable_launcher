@@ -2,5 +2,5 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="jp.gr.java_conf.shygoo.rotatable_launcher.MainActivity">
+    tools:context="jp.gr.java_conf.shygoo.rotatable_launcher.LauncherActivity">
 </RelativeLayout>
