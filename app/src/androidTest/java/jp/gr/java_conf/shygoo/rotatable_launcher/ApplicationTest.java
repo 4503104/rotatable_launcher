@@ -1,4 +1,4 @@
-package shygoo.java_conf.gr.jp.rotatable_launcher;
+package jp.gr.java_conf.shygoo.rotatable_launcher;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
