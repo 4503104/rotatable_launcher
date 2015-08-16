@@ -3,5 +3,8 @@
     <string name="app_name">Rotatable Launcher</string>
 
     <string name="title_activity_launcher">Launcher</string>
+    <string name="title_activity_app_list">App list</string>
+
+    <string name="label_unknown_app">Unknown app</string>
 
 </resources>

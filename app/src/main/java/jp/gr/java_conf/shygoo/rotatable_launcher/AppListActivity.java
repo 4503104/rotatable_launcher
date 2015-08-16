@@ -4,13 +4,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * ランチャー画面（ホーム画面）
+ * アプリ一覧画面
  */
-public class LauncherActivity extends AppCompatActivity {
+public class AppListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_launcher);
+        setContentView(R.layout.activity_app_list);
     }
 }
