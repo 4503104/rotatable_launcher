@@ -1,7 +1,9 @@
-package jp.gr.java_conf.shygoo.rotatable_launcher;
+package jp.gr.java_conf.shygoo.rotatable_launcher.app_list;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import jp.gr.java_conf.shygoo.rotatable_launcher.R;
 
 /**
  * アプリ一覧画面

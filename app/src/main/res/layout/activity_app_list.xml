@@ -1,6 +1,6 @@
 <fragment
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:name="jp.gr.java_conf.shygoo.rotatable_launcher.AppListFragment"
+    android:name="jp.gr.java_conf.shygoo.rotatable_launcher.app_list.AppListFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />

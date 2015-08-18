@@ -1,4 +1,4 @@
-package jp.gr.java_conf.shygoo.rotatable_launcher;
+package jp.gr.java_conf.shygoo.rotatable_launcher.app_list;
 
 import android.app.ListFragment;
 import android.content.ComponentName;
@@ -20,6 +20,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import jp.gr.java_conf.shygoo.rotatable_launcher.R;
 
 /**
  * アプリ一覧用Fragment
