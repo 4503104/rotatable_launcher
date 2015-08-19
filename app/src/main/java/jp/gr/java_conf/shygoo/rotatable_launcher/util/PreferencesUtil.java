@@ -59,20 +59,12 @@ public class PreferencesUtil {
                 .apply();
     }
 
-    public static int getPaddingPortLeft(Context context) {
-        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_PORT_LEFT, 0);
+    public static int getGridCountLong(Context context) {
+        return getPreferences(context).getInt(PREFERENCES_KEY_GRID_COUNT_LONG, 0);
     }
 
-    public static int getPaddingPortTop(Context context) {
-        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_PORT_TOP, 0);
-    }
-
-    public static int getPaddingPortRight(Context context) {
-        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_PORT_RIGHT, 0);
-    }
-
-    public static int getPaddingPortBottom(Context context) {
-        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_PORT_BOTTOM, 0);
+    public static int getGridCountShort(Context context) {
+        return getPreferences(context).getInt(PREFERENCES_KEY_GRID_COUNT_SHORT, 0);
     }
 
     /**
@@ -93,20 +85,20 @@ public class PreferencesUtil {
                 .apply();
     }
 
-    public static int getPaddingLandLeft(Context context) {
-        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_LAND_LEFT, 0);
+    public static int getPaddingPortLeft(Context context) {
+        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_PORT_LEFT, 0);
     }
 
-    public static int getPaddingLandTop(Context context) {
-        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_LAND_TOP, 0);
+    public static int getPaddingPortTop(Context context) {
+        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_PORT_TOP, 0);
     }
 
-    public static int getPaddingLandRight(Context context) {
-        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_LAND_RIGHT, 0);
+    public static int getPaddingPortRight(Context context) {
+        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_PORT_RIGHT, 0);
     }
 
-    public static int getPaddingLandBottom(Context context) {
-        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_LAND_BOTTOM, 0);
+    public static int getPaddingPortBottom(Context context) {
+        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_PORT_BOTTOM, 0);
     }
 
     /**
@@ -125,5 +117,21 @@ public class PreferencesUtil {
                 .putInt(PREFERENCES_KEY_PADDING_LAND_RIGHT, right)
                 .putInt(PREFERENCES_KEY_PADDING_LAND_BOTTOM, bottom)
                 .apply();
+    }
+
+    public static int getPaddingLandLeft(Context context) {
+        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_LAND_LEFT, 0);
+    }
+
+    public static int getPaddingLandTop(Context context) {
+        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_LAND_TOP, 0);
+    }
+
+    public static int getPaddingLandRight(Context context) {
+        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_LAND_RIGHT, 0);
+    }
+
+    public static int getPaddingLandBottom(Context context) {
+        return getPreferences(context).getInt(PREFERENCES_KEY_PADDING_LAND_BOTTOM, 0);
     }
 }

@@ -5,7 +5,6 @@ import android.graphics.Point;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -89,7 +88,6 @@ public class MeasureFragment extends Fragment {
      * 縦サイズ計測
      */
     private void measurePortraitSize() {
-        Log.e("HOGEHOGE", "measurePortraitSize()");//TODO
 
         // 各種画面サイズを取得
         realSizePort = getRealSize();
@@ -110,7 +108,6 @@ public class MeasureFragment extends Fragment {
      * 横サイズ計測
      */
     private void measureLandscapeSize() {
-        Log.e("HOGEHOGE", "measureLandscapeSize()");//TODO
 
         // 各種画面サイズを取得
         realSizeLand = getRealSize();
@@ -184,7 +181,6 @@ public class MeasureFragment extends Fragment {
      * TODO: このメソッドでカバーできない端末がないか確認
      */
     private void calculateLauncherSize() {
-        Log.e("HOGEHOGE", "calculateLauncherSize()");//TODO
 
         // 画面実サイズから、長辺と短辺を決定
         int displayLengthLong = realSizeLand.x;
@@ -229,18 +225,18 @@ public class MeasureFragment extends Fragment {
         // Viewサイズと各種バーのサイズから、最終的な余白サイズを確定
         paddingLongSide = (displayLengthLong - viewLengthLong) / 2;
         paddingShortSide = (displayLengthShort - viewLengthShort) / 2;
+
         int paddingPortLeft = paddingShortSide;
         int paddingPortTop = paddingLongSide - statusBarHeightPort;
         int paddingPortRight = paddingShortSide;
         int paddingPortBottom = paddingLongSide - navigationBarHeightPort;
         PreferencesUtil.setPaddingsPort(getActivity(), paddingPortLeft, paddingPortTop, paddingPortRight, paddingPortBottom);
-        Log.e("HOGEHOGE", paddingPortLeft+", "+paddingPortTop+", "+paddingPortRight+", "+paddingPortBottom);//TODO
+
         int paddingLandLeft = paddingLongSide;
         int paddingLandTop = paddingShortSide - statusBarHeightLand;
         int paddingLandRight = paddingLongSide - navigationBarWidthLand;
         int paddingLandBottom = paddingShortSide - navigationBarHeightLand;
         PreferencesUtil.setPaddingsLand(getActivity(), paddingLandLeft, paddingLandTop, paddingLandRight, paddingLandBottom);
-        Log.e("HOGEHOGE", paddingLandLeft + ", " + paddingLandTop + ", " + paddingLandRight + ", " + paddingLandBottom);//TODO
 
         // ランチャー画面を表示
         showLauncher();
@@ -255,12 +251,13 @@ public class MeasureFragment extends Fragment {
         getActivity().setRequestedOrientation(orgOrientation);
 
         // 計測完了
-        //PreferencesUtil.setMeasured(getActivity());//TODO
+        PreferencesUtil.setMeasured(getActivity());
 
         // この画面を終了し、ランチャー画面を起動
         getFragmentManager().beginTransaction()
+                .hide(this)
                 .remove(this)
-                .add(R.id.container_home, new LauncherFragment())
+                .add(android.R.id.content, new LauncherFragment())
                 .commit();
     }
 }

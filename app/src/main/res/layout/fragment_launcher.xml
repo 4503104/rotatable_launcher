@@ -3,20 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="jp.gr.java_conf.shygoo.rotatable_launcher.home.HomeActivity"
     android:id="@+id/launcher_root"
-    android:background="#FF0000"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-
-    <RelativeLayout
-        android:background="#0000FF"
+    <FrameLayout
+        android:id="@+id/frame_port"
+        android:visibility="invisible"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-        <Button
-            android:id="@+id/button_app_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-
+        android:layout_height="match_parent">
+        <GridView
+            android:id="@+id/grid_port_normal"
+            android:visibility="invisible"
+            android:columnWidth="@dimen/launcher_grid_size"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <GridView
+            android:id="@+id/grid_port_reverse"
+            android:visibility="invisible"
+            android:columnWidth="@dimen/launcher_grid_size"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/frame_land"
+        android:background="#FFFFFF"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridView
+            android:id="@+id/grid_land_normal"
+            android:visibility="invisible"
+            android:columnWidth="@dimen/launcher_grid_size"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <GridView
+            android:id="@+id/grid_land_reverse"
+            android:visibility="invisible"
+            android:columnWidth="@dimen/launcher_grid_size"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
 </FrameLayout>
