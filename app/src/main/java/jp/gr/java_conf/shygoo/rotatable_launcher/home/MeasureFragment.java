@@ -219,6 +219,7 @@ public class MeasureFragment extends Fragment {
         PreferencesUtil.setGridCounts(getActivity(), gridCountLong, gridCountShort);
 
         // アイコンの数から、最終的なViewサイズを確定
+        // TODO: 残ったスペースを均等割りで大きく使いたい
         viewLengthLong = gridSize * gridCountLong;
         viewLengthShort = gridSize * gridCountShort;
 
