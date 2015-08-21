@@ -135,7 +135,7 @@ public class LauncherFragment extends Fragment {
         for (int x = 0; x < gridCountLong; x++) {
             for (int y = 0; y < gridCountShort; y++) {
                 if (i == size) {
-                    return;
+                    break;
                 }
                 apps[x][y] = names.get(i++);
             }
